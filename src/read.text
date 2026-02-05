@@ -1,0 +1,26 @@
+{
+  "serviceId": "4276",
+  "account": {
+    "name": "John",
+    "region": "IN"
+  },
+  "charges": {
+    "articleTest": {
+      "chargeCode": "articleTest",
+      "amount": 1
+    }
+  },
+  "taxes": [
+    { "taxCode": "GST", "value": 18 }
+  ]
+}
+
+
+-------------------------------------------------
+[
+  { label: "Service ID", valuePath: "serviceId" },
+  { label: "Account Name", valuePath: "account.name" },
+  { label: "Charge Code", valuePath: "charges{}.*.chargeCode" },
+  { label: "Tax Code", valuePath: "taxes[].taxCode" },
+  { label: "Global", valuePath: "*" }
+]
